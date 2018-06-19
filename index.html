@@ -7,14 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Intuit Challenge</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen|Poppins|Quicksand" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
         <nav>
             <div>
-                <img src="./images/addBtn.png" class="addIcon">
+                <img src="./images/addBtn.png" alt="Add Receipt" class="addIcon">
             </div>
             <div id="titleDiv">
                 <a id="title">Thanksgiving Receipts</a>
@@ -22,11 +23,37 @@
         </nav>
     </header>
 
-
     <div>
-
+        <table style="width:100%">
+            <tr>
+                <th>
+                    <div>
+                        <div onclick="showList()" class="dropbtn">&#9660 Name</div>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#" class="dropbtn">Link 1</a>
+                            <a href="#" class="dropbtn">Link 2</a>
+                            <a href="#" class="dropbtn">Link 3</a>
+                        </div>
+                    </div>
+                </th>
+                <th>Item</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </table>
     </div>
-    
+
+
+    <script src="./index.js"></script>
 </body>
 
 </html>
