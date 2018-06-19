@@ -1,0 +1,22 @@
+.addIcon {
+    width: 50px;
+    vertical-align: middle;
+}
+
+#title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 65px;
+}
+
+#titleDiv {
+    margin: auto;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    border-bottom-color: #cccc;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
