@@ -51,7 +51,6 @@ function unhoverEdit(element) {
 $(function () {
     $('#editIcon').click(function () {
         $('.editColumn').toggle();
-        // $('.editBtn').toggle();
     });
 });
 
