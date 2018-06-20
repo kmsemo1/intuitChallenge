@@ -154,18 +154,6 @@ button {
     color: white;
 }
 
-/* .submit1:hover {
-    background-color: white;
-    color: black;
-    border: black solid 1px;
-} */
-
-/* Extra styles for the cancel button */
-/* .cancelbtn:hover {
-    background-color: black;
-    color: white;
-} */
-
 .cancelbtn {
     background-color: white;
     color: black;
@@ -194,7 +182,7 @@ button {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
+    background-color:rgba(0, 0, 0, 0.7);;
     padding-top: 50px;
 }
 
@@ -225,7 +213,7 @@ hr {
 
 .close:hover,
 .close:focus {
-    color: #414141;
+    color: #000000;
     cursor: pointer;
 }
 

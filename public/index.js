@@ -1,12 +1,9 @@
 // Get the modal
 var modal = document.getElementById('myModal');
-
 // Get the button that opens the modal
 var btn = document.getElementById("addIcon");
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
 //  Get the cancelbtn that closes the modal
 var cancelbtn = document.getElementsByClassName("cancelbtn")[0];
 
@@ -77,8 +74,6 @@ $(function() {
   });
 
   
-
-
 
 
   //   When submit1 is hovered then change styling of submit1 and cancelbtn
