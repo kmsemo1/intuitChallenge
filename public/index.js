@@ -31,12 +31,24 @@ window.onclick = function (event) {
 
 // Hover img change for add reciept 
 function hover(element) {
-    element.setAttribute('src', '../images/addHover.png');
+    element.setAttribute('src', './images/addHover.png');
   }
   
   function unhover(element) {
-    element.setAttribute('src', '../images/addBtn.png');
+    element.setAttribute('src', './images/addBtn.png');
   }
+
+//   Hover img for editIcon
+function hoverEdit(element) {
+    element.setAttribute('src', './images/editHover.png');
+  }
+  
+  function unhoverEdit(element) {
+    element.setAttribute('src', './images/edit.png');
+  }
+
+// Show edit column when editIcon is clicked
+
 
 
 

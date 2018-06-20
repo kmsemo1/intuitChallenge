@@ -16,7 +16,11 @@
     <header>
         <nav>
             <div>
-                <img src="../images/addBtn.png" alt="Add Receipt" id="addIcon" onmouseover="hover(this);" onmouseout="unhover(this);">
+                <img src="./images/addBtn.png" alt="Add Receipt" id="addIcon" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+
+            <div>
+                <img src="./images/edit.png" alt="Edit" id="editIcon" onmouseover="hoverEdit(this);" onmouseout="unhoverEdit(this);">
             </div>
 
             <!-- The Modal -->
@@ -82,10 +86,21 @@
 
         <table>
             <tr>
+                <th id="editColumn">Select</th>
                 <th>Name</th>
                 <th>Transactions With</th>
                 <th>Item</th>
                 <th>Cost</th>
+            </tr>
+
+
+            <tr>
+                <td rowspan="5">
+                    <span class="editBtn">Edit</span>
+                    <span class="editBtn" id="editSave">Save</span>
+                    <span class="editBtn" id="editCancel">Cancel</span>
+                    <span class="editBtn">Delete</span>
+                </td>
             </tr>
 
             <tr>
@@ -108,6 +123,14 @@
             </tr>
 
             <tr>
+                    <td rowspan="4">
+                        <span class="editBtn">Edit</span>
+                        <span class="editBtn" id="editSave">Save</span>
+                        <span class="editBtn" id="editCancel">Cancel</span>
+                        <span class="editBtn">Delete</span>
+                    </td>
+                </tr>
+            <tr>
                 <th id="yourName" rowspan="3">Megan Markle</th>
             </tr>
             <tr>
@@ -125,7 +148,7 @@
 
 
 
-    
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous"></script>

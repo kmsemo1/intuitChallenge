@@ -5,6 +5,13 @@
     cursor: pointer;
 }
 
+#editIcon {
+    margin-left: 20px;
+    width: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
 #title {
     font-family: 'Poppins', sans-serif;
     font-size: 65px;
@@ -73,6 +80,15 @@ nav {
 
 .show {display: block;}
 
+#nameFilter {
+    font-family: 'Quicksand', sans-serif;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+    overflow: auto;
+    width: 768px;
+}
+
 /* --- TABLE STYLING --- */
 table {
     padding-top: 5px;
@@ -85,7 +101,7 @@ th {
     color: white;
     font-weight: bolder;
     border: 1px solid black;
-    column-width: 250px;
+    column-width: 150px;
     overflow: auto;
     background-color: black;
 }
@@ -98,17 +114,14 @@ td {
 }
 
 #yourName {
-    background-color: #cccc;
+    background-color: rgb(211, 211, 211);
     color: black;
 }
 
-#nameFilter {
-    font-family: 'Quicksand', sans-serif;
-    margin: auto;
-    text-align: center;
-    border: 1px solid black;
-    overflow: auto;
-    width: 768px;
+.editBtn {
+    padding: 0.3em;
+    border-left: 1px solid rgb(179, 179, 179);
+    border-right: 1px solid rgb(179, 179, 179);
 }
 
 
