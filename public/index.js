@@ -69,9 +69,9 @@ window.onclick = function (event) {
 
 // Hover img for add reciept 
 function hover(element) {
-    element.setAttribute('src', './images/addHover.png');
+    element.setAttribute('src', '../images/addHover.png');
   }
   
   function unhover(element) {
-    element.setAttribute('src', './images/addBtn.png');
+    element.setAttribute('src', '../images/addBtn.png');
   }
