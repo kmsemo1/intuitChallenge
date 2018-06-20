@@ -15,8 +15,50 @@
     <header>
         <nav>
             <div>
-                <img src="./images/addBtn.png" alt="Add Receipt" class="addIcon">
+                <img src="./images/addBtn.png" alt="Add Receipt" id="addIcon" onmouseover="hover(this);" onmouseout="unhover(this);">
             </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <form action="action_page.php" class="modal-content">
+                    <div class="container">
+                        <span class="close">&times;</span>
+                        </br>
+                        <h1>Add Reciept</h1>
+                        <p>Please fill the form to add reciept. </p>
+                        <hr>
+
+                        <label for="name">
+                            <b>Name</b>
+                        </label>
+                        <input type="text" placeholder="Enter Full Name" name="name" required>
+
+                        <label for="recipient-name">
+                            <b>Add Recipients</b>
+                        </label>
+                        <input type="text" placeholder="Enter Recipients Name(s)" name="recipient-name" required>
+
+                        <label for="item">
+                            <b>Item Name</b>
+                        </label>
+                        <input type="text" placeholder="Enter Item(s)" name="item" required>
+
+
+                        <label for="cost">
+                            <b>Amount</b>
+                        </label>
+                        <input type="number" placeholder="$" name="cost" required>
+
+                        <div class="clearfix">
+                            <button type="submit" class="signupbtn">Submit</button>
+                            <button type="button" class="cancelbtn">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
             <div id="titleDiv">
                 <a id="title">Thanksgiving Receipts</a>
             </div>
@@ -24,30 +66,58 @@
     </header>
 
     <div>
-        <table style="width:100%">
+
+        <!-- <div id="nameFilter">
+            <div onclick="showList()" class="dropbtn">&#9660 Choose a name to see their transactions</div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#" class="dropbtn">
+                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                </a>
+                <a href="#" class="dropbtn">Kanye West</a>
+                <a href="#" class="dropbtn">Taylor Swift</a>
+                <a href="#" class="dropbtn">Megan Markle</a>
+            </div>
+        </div> -->
+
+        <table>
             <tr>
-                <th>
-                    <div>
-                        <div onclick="showList()" class="dropbtn">&#9660 Name</div>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#" class="dropbtn">Link 1</a>
-                            <a href="#" class="dropbtn">Link 2</a>
-                            <a href="#" class="dropbtn">Link 3</a>
-                        </div>
-                    </div>
-                </th>
+                <th>Your Name</th>
+                <th>Transactions With</th>
                 <th>Item</th>
                 <th>Cost</th>
             </tr>
+
             <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-                <td>50</td>
+                <th id="yourName" rowspan="4">Jackie Chan</th>
             </tr>
             <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
+                <td>Kanye West</td>
+                <td>Pancakes</td>
+                <td>$5.00</td>
+            </tr>
+            <tr>
+                <td>Taylor Swift</td>
+                <td>Fruit Cake</td>
+                <td>$10.50</td>
+            </tr>
+            <tr>
+                <td>Megan Markle</td>
+                <td>Tea</td>
+                <td>$12.00</td>
+            </tr>
+
+            <tr>
+                <th id="yourName" rowspan="3">Megan Markle</th>
+            </tr>
+            <tr>
+                <td>Kanye West</td>
+                <td>Pancakes</td>
+                <td>$5.00</td>
+            </tr>
+            <tr>
+                <td>Taylor Swift</td>
+                <td>Fruit Cake</td>
+                <td>$10.50</td>
             </tr>
         </table>
     </div>
