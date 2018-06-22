@@ -42,21 +42,21 @@
                         <label for="recipient-name">
                             <b>Add Recipients</b>
                         </label>
-                        <input type="text" placeholder="Enter Recipients Name(s)" name="recipient-name" required>
+                        <input type="text" placeholder="Enter Recipients Name(s)" name="recipient-name" id="recipient" required>
 
                         <label for="item">
                             <b>Item Name</b>
                         </label>
-                        <input type="text" placeholder="Enter Item(s)" name="item" required>
+                        <input type="text" placeholder="Enter Item(s)" name="item" id="item" required>
 
 
                         <label for="cost">
-                            <b>Amount</b>
+                            <b>Price Amount</b>
                         </label>
-                        <input type="number" placeholder="$" name="cost" required>
+                        <input type="number" placeholder="$" name="cost" id="price" required>
 
                         <div class="clearfix">
-                            <button type="submit" class="submit1">Submit</button>
+                            <button type="submit" class="submit1" onclick="addRow()">Submit</button>
                             <button type="button" class="cancelbtn">Cancel</button>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
             </div>
         </div> -->
 
-        <table>
+        <table id="table">
             <tr>
                 <th class="editColumn">Select</th>
                 <th>Name</th>
@@ -104,22 +104,22 @@
             </tr>
 
             <tr>
-                <th id="yourName" rowspan="4">Jackie Chan</th>
+                <th class="nameTable" id="yourName" rowspan="4">Jackie Chan</th>
             </tr>
             <tr>
-                <td>Kanye West</td>
-                <td>Pancakes</td>
-                <td>$5.00</td>
+                <td class="td1">Kanye West</td>
+                <td class="td2">Pancakes</td>
+                <td class="td3">$5.00</td>
             </tr>
             <tr>
-                <td>Taylor Swift</td>
-                <td>Fruit Cake</td>
-                <td>$10.50</td>
+                <td class="td1">Taylor Swift</td>
+                <td class="td2">Fruit Cake</td>
+                <td class="td3">$10.50</td>
             </tr>
             <tr>
-                <td>Megan Markle</td>
-                <td>Tea</td>
-                <td>$12.00</td>
+                <td class="td1">Megan Markle</td>
+                <td class="td2">Tea</td>
+                <td class="td3">$12.00</td>
             </tr>
 
             <tr class="editColumn">
@@ -131,7 +131,7 @@
                 </td>
             </tr>
             <tr>
-                <th id="yourName" rowspan="3">Megan Markle</th>
+                <th class="nameTable" id="yourName" rowspan="3">Megan Markle</th>
             </tr>
             <tr>
                 <td>Kanye West</td>
@@ -152,7 +152,8 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous"></script>
-    <script src="./index.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/addReciept.js"></script>
 </body>
 
 </html>
