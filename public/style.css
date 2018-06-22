@@ -104,16 +104,18 @@ th {
     column-width: 150px;
     overflow: auto;
     background-color: black;
+    padding: 5px;
 }
 
 td {
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     border: 1px solid black;
-    overflow: auto;
+    overflow: auto; 
+    padding: 5px;
 }
 
-#yourName {
+.yourName {
     background-color: rgb(211, 211, 211);
     color: black;
 }
@@ -122,9 +124,6 @@ td {
     padding: 0.3em;
     border-left: 1px solid rgb(179, 179, 179);
     border-right: 1px solid rgb(179, 179, 179);
-}
-
-#editCell {
     border: none;
 }
 
@@ -145,6 +144,7 @@ td {
 * {box-sizing: border-box}
 form {
     font-family: 'Oxygen', sans-serif;
+    overflow: auto;
 }
 /* Full-width input fields */
 input[type=text], input[type=number] {
@@ -161,6 +161,21 @@ input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
+
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center
+}
+.flex input {
+    /* max-width: 300px; */
+    flex: 1 1 300px;
+}
+
+#dollar {
+    margin-bottom: 8px;
+}
+
 
 /* Set a style for all buttons */
 button {

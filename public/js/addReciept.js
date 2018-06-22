@@ -1,9 +1,14 @@
-function check_empty() {
+// ========= MODAL JS ==========
+
+
+// SUBMIT btn check and submit
+function submit() {
     if (document.getElementById('name').value == "" || document.getElementById('email').value == "" || document.getElementById('msg').value == "") {
         alert("Fill All Fields !");
     } else {
         document.getElementById('form').submit();
-        alert("Form Submitted Successfully...");
+        modal.style.display = "none";
+        addRow();
     }
 }
 
@@ -28,3 +33,4 @@ function addRow() {
  
      table.children[0].appendChild(row);
 };
+

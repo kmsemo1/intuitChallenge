@@ -1,3 +1,4 @@
+// ========== HTML STYING JS ==========
 // Get the modal
 var modal = document.getElementById('myModal');
 // Get the button that opens the modal
@@ -38,6 +39,7 @@ function unhover(element) {
     element.setAttribute('src', './images/addBtn.png');
 }
 
+
 //   Hover img for editIcon
 function hoverEdit(element) {
     element.setAttribute('src', './images/editHover.png');
@@ -46,14 +48,6 @@ function hoverEdit(element) {
 function unhoverEdit(element) {
     element.setAttribute('src', './images/edit.png');
 }
-
-// Show edit column when editIcon is clicked
-$(function () {
-    $('#editIcon').click(function () {
-        $('.editColumn').toggle();
-    });
-});
-
 
 //   When cancelbtn is hovered then change styling of submit1 and cancelbtn
 $(function () {
@@ -87,8 +81,6 @@ $(function () {
         $('.cancelbtn').css('color', 'black');
     });
 });
-
-
 
 
 //   When submit1 is hovered then change styling of submit1 and cancelbtn
