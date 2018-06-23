@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intuit Challenge</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./images/addBtn.png" alt="Add Receipt" id="addIcon" onmouseover="hover(this);" onmouseout="unhover(this);">
+            </div>
+
+            <div>
+                <img src="./images/edit.png" alt="Edit" id="editIcon" onmouseover="hoverEdit(this);" onmouseout="unhoverEdit(this);">
+            </div>
+
+            <div id="titleDiv">
+                <a id="title">Thanksgiving Receipts</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <form class="modal-content">
+            <div class="container">
+                <span class="close">&times;</span>
+                </br>
+                <h1>Add Reciept</h1>
+                <p>Please fill the form to add reciept. </p>
+                <hr>
+
+                <label for="name">
+                    <b>Creditor's Name</b>
+                </label>
+                <input type="text" placeholder="Enter Creditor's Name" name="name" id="creditor" required>
+
+                <label for="recipient-name">
+                    <b>Debtor's Name</b>
+                </label>
+                <input type="text" placeholder="Enter Debtor's Name" name="recipient-name" id="recipient" required>
+
+                <label for="item">
+                    <b>Item Name</b>
+                </label>
+                <input type="text" placeholder="Enter Item(s)" name="item" id="item" required>
+
+
+                <label for="cost">
+                    <b>Price Amount</b>
+                </label>
+                <div class="clearfix">
+                    <div class="flex">
+                        <span id="dollar">$</span>
+                        <input type="number" placeholder="Enter total amount owed" name="cost" min="0.01" step="0.01" id="price" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit1" onclick="submit()" onclick="newRow()">Submit</button>
+                <button type="button" class="cancelbtn">Cancel</button>
+
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/table.js"></script>
+    <script src="./js/addReciept.js"></script>
+    <script src="./js/editBtn.js"></script>
+</body>
+
+</html>

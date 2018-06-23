@@ -12,25 +12,65 @@ function submit() {
     }
 }
 
-function addRow() {
-    "use strict";
+// function addRow() {
+//     "use strict";
  
-     var table = document.getElementById("table");
+//      var table = document.getElementById("table");
      
-     var row= document.createElement("tr");
-     console.log(row);
-     var td1 = document.createElement("td");
-     var td2 = document.createElement("td");
-     var td3 = document.createElement("td");    
+//      var row= document.createElement("tr");
+//      console.log(row);
+//      var td1 = document.createElement("td");
+//      var td2 = document.createElement("td");
+//      var td3 = document.createElement("td");    
  
-     td1.innerHTML = document.getElementById("recipient").value;
-     td2.innerHTML  = document.getElementById("item").value;
-     td3.innerHTML  = document.getElementById("price").value;
+//      td1.innerHTML = document.getElementById("recipient").value;
+//      td2.innerHTML  = document.getElementById("item").value;
+//      td3.innerHTML  = document.getElementById("price").value;
  
-     row.appendChild(td1);
-     row.appendChild(td2);
-     row.appendChild(td3);
+//      row.appendChild(td1);
+//      row.appendChild(td2);
+//      row.appendChild(td3);
  
-     table.children[0].appendChild(row);
-};
+//      table.children[0].appendChild(row);
+// };
+
+// function AddData() {
+//     var cell1 = document.getElementById("creditor").value;
+//     var cell2 = document.getElementById("recipient").value;
+//     var cell3 = document.getElementById("item").value;
+//     var cell4 = document.getElementById("cost").value;
+
+//     if ((cell1 == parseInt(cell1)) && (cell2 == parseInt(cell2) && (cell3 == parseInt(cell3) && (parseInt(cell4) != (cell4))) {
+//         alert("Wrong Value Entered");
+//     } else {
+//         var rows = "";
+//         var cell1 = document.getElementById("age").value;
+//         var cell2 = $('input[name="gender"]').val();
+//         var cell3 = document.getElementById("age").value;
+//         var cell4 = document.getElementById("city").value;
+
+//         rows += "<tr><td>" + cell1 + "</td><td>" + cell2 + "</td><td>" + cell3 + "</td><td>" + cell4 + "</td></tr>";
+//         $(rows).appendTo("#list tbody");
+//     }
+// };
+
+function newRow() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(-1);
+    var cell1 = row.insertCell(1);
+    var cell2 = row.insertCell(2);
+    var cell3 = row.insertCell(3);
+    var cell4 = row.insertCell(4);
+
+
+    cell1.innerHTML = document.getElementById("creditor").value;;
+    cell2.innerHTML = document.getElementById("recipient").value;;
+    cell3.innerHTML = document.getElementById("item").value;;
+    cell4.innerHTML = document.getElementById("price").value;;
+}
+
+function submitForm() {
+    var x = document.getElementById("creditor").value;
+    document.getElementById("showData").innerHTML = x;
+}
 

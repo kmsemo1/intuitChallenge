@@ -72,6 +72,56 @@ function createTable() {
     divContainer.appendChild(table);
 }
 
+// // ========== TABLE JS ==========
+// dynamic table function
+// var editOption = ["Edit", "Save", "Cancel", "Delete"];
+
+// function createTable() {
+//     var myTableDiv = document.getElementById("metric_results")
+//             var table = document.createElement('TABLE')
+//             var tableBody = document.createElement('TBODY')
+
+//             table.appendChild(tableBody);
+
+//             var heading = new Array();
+//             heading[0] = "Select"
+//             heading[1] = "Creditor"
+//             heading[2] = "Debitor"
+//             heading[3] = "Item"
+//             heading[4] = "Total Amount"
+
+//             // EDIT OBJECT
+            
+//             var transaction = new Array()
+//             transaction[0] = new Array(editOption, "Kanye West", "Taylor Swift", "Pancakes", "12.50")
+//             transaction[1] = new Array(editOption, "Megan Markele", "Kanye West", "Salad", "5.00")
+//             transaction[2] = new Array(editOption, "Taylor Swift", "Megan Markele", "Tea", "30.30")
+
+
+//             //TABLE COLUMNS
+//             var tr = document.createElement('tr');
+//             tableBody.appendChild(tr);
+//             for (i = 0; i < heading.length; i++) {
+//                 var th = document.createElement('th')
+//                 th.width = '75';
+//                 th.appendChild(document.createTextNode(heading[i]));
+//                 tr.appendChild(th);
+//             }
+
+//             //TABLE ROWS
+//             for (i = 0; i < stock.length; i++) {
+//                 var tr = document.createElement('tr');
+//                 for (j = 0; j < stock[i].length; j++) {
+//                     var td = document.createElement('td')
+//                     td.appendChild(document.createTextNode(stock[i][j]));
+//                     tr.appendChild(td)
+//                 }
+//                 tableBody.appendChild(tr);
+//             }
+//             myTableDiv.appendChild(table)
+
+//         };
+
 
 function addClassTable() {
     createTable();
