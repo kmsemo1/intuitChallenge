@@ -1,7 +1,7 @@
 {
   "name": "intuitchallenge",
   "version": "1.0.0",
-  "description": "intuit thanksgiving challege",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,9 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/kmsemo1/intuitChallenge.git"
   },
-  "keywords": [
-    "intuit"
-  ],
   "author": "Kevin Semo",
   "license": "ISC",
   "bugs": {
@@ -21,7 +18,6 @@
   },
   "homepage": "https://github.com/kmsemo1/intuitChallenge#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
     "express": "^4.16.3"
   }
 }
