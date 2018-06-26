@@ -17,9 +17,9 @@
                 <img src="./images/addBtn.png" alt="Add Receipt" id="addIcon" onmouseover="hover(this);" onmouseout="unhover(this);">
             </div>
 
-            <div>
+            <!-- <div>
                 <img src="./images/edit.png" alt="Edit" id="editIcon" onmouseover="hoverEdit(this);" onmouseout="unhoverEdit(this);">
-            </div>
+            </div> -->
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
@@ -57,9 +57,9 @@
                                 <input type="number" placeholder="Enter total amount owed" name="cost" min="0.01" step="0.01" id="price" required>
                             </div>
                         </div>
-                            <button type="submit" class="submit1" onclick="submit()">Submit</button>
-                            <button type="button" class="cancelbtn">Cancel</button>
-                        
+                        <button type="submit" class="submit1" onclick="submit()">Submit</button>
+                        <button type="button" class="cancelbtn">Cancel</button>
+
                     </div>
                 </form>
 
@@ -72,14 +72,19 @@
     </header>
 
     <div>
+        <div id="showData">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Transactions With</th>
+                    <th>Item</th>
+                    <th>Cost</th>
+                    <th id="editColumn">Select</th>
+                </tr>
+            </table>
+        </div>
 
-            <div id="showData">
-                <table>
 
-                </table>
-            </div>
-
-       
     </div>
 
 
@@ -89,7 +94,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous"></script>
     <script src="./js/style.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/receipt.js"></script>
+    <script src="./js/newReciept.js"></script>
 </body>
 
 </html>
