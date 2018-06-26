@@ -1,40 +1,40 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Find all Authors and return them to the user with res.json
-  app.get("/api/authors", function(req, res) {
-    db.Author.findAll({}).then(function(dbAuthor) {
-      res.json(dbAuthor);
+  // Find all creditors and return them to the user with res.json
+  app.get("/api/creditors", function(req, res) {
+    db.Creditor.findAll({}).then(function(dbCreditor) {
+      res.json(dbCreditor);
     });
   });
 
-  app.get("/api/authors/:id", function(req, res) {
-     // Find one Author with the id in req.params.id and return them to the user with res.json
-    db.Author.findOne({
+  app.get("/api/creditors/:id", function(req, res) {
+     // Find one Creditor with the id in req.params.id and return them to the user with res.json
+    db.Creditor.findOne({
       where: {
         id: req.params.id
       }
-    }).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    }).then(function(dbCreditor) {
+      res.json(dbCreditor);
     });
   });
 
-  app.post("/api/authors", function(req, res) {
-     // Create an Author with the data available to us in req.body
+  app.post("/api/creditors", function(req, res) {
+     // Create an Creditor with the data available to us in req.body
     console.log(req.body);
-    db.Author.create(req.body).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    db.Creditor.create(req.body).then(function(dbCreditor) {
+      res.json(dbCreditor);
     });
   });
 
-  app.delete("/api/authors/:id", function(req, res) {
-    // Delete the Author with the id available to us in req.params.id
-    db.Author.destroy({
+  app.delete("/api/creditors/:id", function(req, res) {
+    // Delete the Creditor with the id available to us in req.params.id
+    db.Creditor.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbAuthor) {
-      res.json(dbAuthor);
+    }).then(function(dbCreditor) {
+      res.json(dbCreditor);
     });
   });
 
