@@ -5,7 +5,7 @@ CREATE DATABASE receiptDB;
 USE receiptDB;
 
 CREATE TABLE newPerson (
-  receipt INT NOT NULL AUTO_INCREMENT,
+  id INT NOT NULL AUTO_INCREMENT,
   creditor VARCHAR(45) NULL,
   debtor VARCHAR(45) NULL,
   item VARCHAR(45) NULL,
@@ -24,3 +24,5 @@ VALUES ("Megan Markle", "Kanye West", "Salad",
 INSERT INTO newPerson (creditor, debtor, item, price)
 VALUES ("Taylor Swift", "Megan Markle", "Tea",
 18.00);
+
+SELECT * FROM newPerson;
