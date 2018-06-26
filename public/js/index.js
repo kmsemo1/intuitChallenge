@@ -1,158 +1,110 @@
-// ========== HTML STYING JS ==========
-// Get the modal
-var modal = document.getElementById('myModal');
-// Get the button that opens the modal
-var btn = document.getElementById("addIcon");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-//  Get the cancelbtn that closes the modal
-var cancelbtn = document.getElementsByClassName("cancelbtn")[0];
+// ========== TABLE JS ==========
+// ARRAY FOR TABLE EDIT OPTIONS
+var editOption = ["Edit", "Save", "Cancel", "Delete"];
 
-// When the user clicks on the button, open the modal 
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
-// When the user clicks on <span> (x), close the modal
-cancelbtn.onclick = function () {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+// Object for table data
+var Transaction = [
+    {
+        "Select": editOption,
+        "Creditor": "Kanye West",
+        "Debtor": "Taylor Swift",
+        "Item": "Pancakes",
+        "Price": "12.50"
+    },
+    {
+        "Select": editOption,
+        "Creditor": "Megan Markle",
+        "Debtor": "Kanye West",
+        "Item": "Salad",
+        "Price": "5.00"
+    },
+    {
+        "Select": editOption,
+        "Creditor": "Taylor Swift",
+        "Debtor": "Megan Markle",
+        "Item": "Tea",
+        "Price": "30.30"
     }
+];
+
+
+
+// ------dynamic table function
+function createTable() {
+
+    // EXTRACT VALUE FOR HTML HEADER. 
+    var col = [];
+    for (var i = 0; i < Transaction.length; i++) {
+        for (var key in Transaction[i]) {
+            if (col.indexOf(key) === -1) {
+                col.push(key);
+            }
+        }
+    }
+
+    // CREATE DYNAMIC TABLE.
+    var table = document.createElement("table");
+
+    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+    var tr = table.insertRow(-1);                   // TABLE ROW.
+
+    for (var i = 0; i < col.length; i++) {
+        var th = document.createElement("th");      // TABLE HEADER.
+        th.innerHTML = col[i];
+        tr.appendChild(th);
+    }
+
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (var i = 0; i < Transaction.length; i++) {
+
+        tr = table.insertRow(-1);
+
+        for (var j = 0; j < col.length; j++) {
+            var tabCell = tr.insertCell(-1);
+            tabCell.innerHTML = Transaction[i][col[j]];
+        }
+    }
+
+
+    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+    var divContainer = document.getElementById("showData");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+    // console.log(Transaction);
 }
 
-// Hover img change for add reciept 
-function hover(element) {
-    element.setAttribute('src', './images/addHover.png');
+
+function addClassTable() {
+    createTable();
+    // adding classes in the table
+    $("th:first").addClass("editColumn");
+    $("td:first-child").addClass("editColumn");
+    $("td:first-child").addClass("editBtn");
+
 }
+// load JSON as soon as page is loaded
+window.onload = addClassTable;
 
-function unhover(element) {
-    element.setAttribute('src', './images/addBtn.png');
+
+
+// ========== SUBMIT TO ADD TO TABLE ==========
+// Submit function to add new reciept
+function Submit() {
+// create new array and push to json
+var newReciept = {
+    reciept: []
+};
+
+Transaction.map(function(item) {        
+    newReciept.newReciept.push({ 
+        "Select": editOption,
+        "Creditor": item.Creditor,
+        "Debtor": item.Debtor,
+        "Item": item.Item,
+        "Price": item.Price
+    })
+})
+
+console.log(Transaction)
 }
-
-
-//   Hover img for editIcon
-function hoverEdit(element) {
-    element.setAttribute('src', './images/editHover.png');
-}
-
-function unhoverEdit(element) {
-    element.setAttribute('src', './images/edit.png');
-}
-
-//   When cancelbtn is hovered then change styling of submit1 and cancelbtn
-$(function () {
-    $('.cancelbtn').hover(function () {
-        $('.submit1').css('background-color', 'white');
-    }, function () {
-        $('.submit1').css('background-color', 'black');
-    });
-});
-
-$(function () {
-    $('.cancelbtn').hover(function () {
-        $('.submit1').css('color', 'black');
-    }, function () {
-        $('.submit1').css('color', 'white');
-    });
-});
-
-$(function () {
-    $('.cancelbtn').hover(function () {
-        $('.cancelbtn').css('background-color', 'black');
-    }, function () {
-        $('.cancelbtn').css('background-color', 'white');
-    });
-});
-
-$(function () {
-    $('.cancelbtn').hover(function () {
-        $('.cancelbtn').css('color', 'white');
-    }, function () {
-        $('.cancelbtn').css('color', 'black');
-    });
-});
-
-
-//   When submit1 is hovered then change styling of submit1 and cancelbtn
-$(function () {
-    $('.submit1').hover(function () {
-        $('.cancelbtn').css('background-color', 'black');
-    }, function () {
-        $('.cancelbtn').css('background-color', 'white');
-    });
-});
-
-$(function () {
-    $('.submit1').hover(function () {
-        $('.cancelbtn').css('color', 'white');
-    }, function () {
-        $('.cancelbtn').css('color', 'black');
-    });
-});
-
-$(function () {
-    $('.submit1').hover(function () {
-        $('.submit1').css('background-color', 'white');
-    }, function () {
-        $('.submit1').css('background-color', 'black');
-    });
-});
-
-$(function () {
-    $('.submit1').hover(function () {
-        $('.submit1').css('color', 'black');
-    }, function () {
-        $('.submit1').css('color', 'white');
-    });
-});
-
-
-
-
-
-
-
-
-
-//   function showList() {
-    //     document.getElementById("myDropdown").classList.toggle("show");
-    // }
-
-    // window.onclick = function (event) {
-    //     if (!event.target.matches('.dropbtn')) {
-
-    //         var dropdowns = document.getElementsByClassName("dropdown-content");
-    //         var i;
-    //         for (i = 0; i < dropdowns.length; i++) {
-    //             var openDropdown = dropdowns[i];
-    //             if (openDropdown.classList.contains('show')) {
-    //                 openDropdown.classList.remove('show');
-    //             }
-    //         }
-    //     }
-    // }
-
-    // function filterFunction() {
-    //     var input, filter, ul, li, a, i;
-    //     input = document.getElementById("myInput");
-    //     filter = input.value.toUpperCase();
-    //     div = document.getElementById("myDropdown");
-    //     a = div.getElementsByTagName("a");
-    //     for (i = 0; i < a.length; i++) {
-    //         if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-    //             a[i].style.display = "";
-    //         } else {
-    //             a[i].style.display = "none";
-    //         }
-    //     }
-    // }
